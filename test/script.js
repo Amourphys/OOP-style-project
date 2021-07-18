@@ -2931,10 +2931,10 @@ var MainSlider =
 function (_Slider) {
   _inherits(MainSlider, _Slider);
 
-  function MainSlider(page, btns) {
+  function MainSlider(btns) {
     _classCallCheck(this, MainSlider);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(MainSlider).call(this, page, btns));
+    return _possibleConstructorReturn(this, _getPrototypeOf(MainSlider).call(this, btns));
   }
 
   _createClass(MainSlider, [{
@@ -3022,20 +3022,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var Slider = function Slider() {
   var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-      _ref$page = _ref.page,
-      page = _ref$page === void 0 ? '' : _ref$page,
+      _ref$container = _ref.container,
+      container = _ref$container === void 0 ? null : _ref$container,
       _ref$btns = _ref.btns,
-      btns = _ref$btns === void 0 ? '' : _ref$btns,
+      btns = _ref$btns === void 0 ? null : _ref$btns,
       _ref$next = _ref.next,
-      next = _ref$next === void 0 ? '' : _ref$next,
+      next = _ref$next === void 0 ? null : _ref$next,
       _ref$prev = _ref.prev,
-      prev = _ref$prev === void 0 ? '' : _ref$prev;
+      prev = _ref$prev === void 0 ? null : _ref$prev;
 
   _classCallCheck(this, Slider);
 
-  this.page = document.querySelector(page);
+  this.container = document.querySelector(container);
   this.slides = this.page.children;
   this.btns = document.querySelectorAll(btns);
+  this.prev = document.querySelector(prev);
+  this.next = document.querySelector(next);
   this.slideIndex = 1;
 };
 
