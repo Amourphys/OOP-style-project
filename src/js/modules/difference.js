@@ -24,6 +24,7 @@ export default class Difference {
         items.forEach((item, i, arr) => {
             if (i !== arr.length - 1) {
                 item.style.display = 'none';
+                item.classList.add('animated', 'fadeInUp');
             }
         });
     }

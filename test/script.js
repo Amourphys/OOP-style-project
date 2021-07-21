@@ -2859,6 +2859,7 @@ function () {
       items.forEach(function (item, i, arr) {
         if (i !== arr.length - 1) {
           item.style.display = 'none';
+          item.classList.add('animated', 'fadeInUp');
         }
       });
     }
