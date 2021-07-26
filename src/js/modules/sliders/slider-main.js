@@ -32,7 +32,7 @@ export default class MainSlider extends Slider {
         });
 
         this.slides[this.slideIndex - 1].style.display = 'block';
-        this.slides[this.slideIndex - 1].classList.add('.animated', '.fadeInUp');
+        this.slides[this.slideIndex - 1].classList.add('animated', 'fadeInUp');
     }
 
     plusSlides(n) {
